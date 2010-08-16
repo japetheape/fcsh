@@ -1,6 +1,22 @@
 = fcsh
 
-Description goes here.
+Wrapper for FCSH. 
+
+== Usage
+
+@fcsh = Fcsh.new
+target_id = @fcsh.mxmlc "main.mxml"
+@fcsh.errors.each do |error|
+  if error.level == "warn"
+    puts "WARNING"
+  elsif error.level == "error"
+    puts "ERROR"
+  end
+end
+
+
+
+
 
 == Note on Patches/Pull Requests
  
