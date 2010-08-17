@@ -58,7 +58,7 @@ class Fcsh
     # will be enough.
   def capture_error_output
     puts "Capturing error output..."
-    out = ""
+
     @stderr.flush
     error_catching_thread = Thread.new { 
       @out = ""
